@@ -7,7 +7,8 @@
     <body>
         <header>
             <nav class="navbar navbar-light bg-light">
-                <span class="navbar-brand mb-0 h1" style="font-weight: bold">Dan Blog</span>
+                <span class="navbar-brand mb-0 h1" style="font-weight: bold; margin-left: 10px;">Dan Blog</span>
+                <a href="/posts/new" class="btn btn-primary" role="button" style="margin-right: 10px;">Novo</a>
             </nav>
         </header>
 
@@ -26,7 +27,7 @@
                             <span th:text="${post.data}"></span>
                         </p>
 
-                        <a th:href="${(#mvc.url('PC#findDetails').arg(0, post.id)).build()}">
+                        <a th:href="${(#mvc.url('PC#pagePostDetails').arg(0, post.id)).build()}">
                             <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px">
                                 <span th:text="${post.titulo}"></span>
                             </h4>
