@@ -1,5 +1,6 @@
-package br.com.wferreiracosta.dan.exception;
+package br.com.wferreiracosta.dan.controller;
 
+import br.com.wferreiracosta.dan.exception.ObjectNotFoundException;
 import br.com.wferreiracosta.dan.model.StandardError;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +14,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Slf4j
 @ControllerAdvice
-public class ControllerExceptionHandler {
+public class ExceptionHandlerController {
 
     @ExceptionHandler(ObjectNotFoundException.class)
     public ResponseEntity<StandardError> objectNotFound(final ObjectNotFoundException e,
